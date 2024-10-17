@@ -11,7 +11,7 @@ build_from_image() {
 	echo "[+] patch level: $PATCH_LEVEL"
 
 	echo '[+] Download prebuilt ramdisk'
-    GKI_URL=https://dl.google.com/android/gki/gki-certified-boot-android12-5.10-"${PATCH_LEVEL}"_r1.zip
+    GKI_URL=https://dl.google.com/android/gki/gki-certified-boot-android12-5.10-"${PATCH_LEVEL}"_r7.zip
     FALLBACK_URL=https://dl.google.com/android/gki/gki-certified-boot-android12-5.10-2023-01_r1.zip
     status=$(curl -sL -w "%{http_code}" "$GKI_URL" -o /dev/null)
     if [ "$status" = "200" ]; then
